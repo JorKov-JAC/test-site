@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<script>
+	<script type="module">
 		const l = window.location
+		// l.pathname.replace(/(?<=\/[^/]*)\/[^/]*/, "?$&")
 		l.replace(
-			`${l.origin}/${l.pathname.replace(/\/[^/]*/, "$&?$'")}`
+			`${import.meta.url.replace(/\/[^/]*$/, "")}?${l.pathname}`
 		)
 	</script>
 </head>
