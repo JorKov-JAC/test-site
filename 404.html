@@ -3,11 +3,10 @@
 <head>
 	<script type="module">
 		const l = window.location
-		// sessionStorage.setItem("url", l.href)
+		sessionStorage.setItem("url", l.href)
 		l.replace(
 			`${import.meta.url.replace(/\/[^/]*$/, "")}`
 		)
-		window.history.replaceState({ url: l.href }, "")
 	</script>
 </head>
 </html>
